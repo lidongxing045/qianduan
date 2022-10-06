@@ -49,6 +49,7 @@ export default {
   width: 100%;
   height: 100%;
   top: 0px;
+  left:0px;
   bottom: 0;
 
   .content {

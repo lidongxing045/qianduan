@@ -18,9 +18,6 @@ export function students(params){
 }
 //学生删除
 export function studentDel(id){
-    console.log(id + "rowid")
-    console.log(`/api2/students/${id}`)
-
     return service({
         method:'delete',
         url:`/api2/students/${id}`
@@ -37,7 +34,7 @@ export function info(data){
         data
     })
 }
-//信息修改
+//信息更新
 export function updateInfo(data){
     data = qs.stringify(data);
     return service({
@@ -53,4 +50,13 @@ export function getInfo(){
         url:'/api2/info',
     })
 }
+//信息删除
+export function delInfo(id){
+    return service({
+        method:'delete',
+        url:'/api2/info/'+ id,
+        //url:`/api2/info/${id}`
+    })
+}
+
 

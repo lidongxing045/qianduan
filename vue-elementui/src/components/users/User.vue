@@ -8,6 +8,7 @@
         ref="tree">
         </el-tree>
         <el-button @click="getCheckNodes">获取权限</el-button>
+
     </div>
 </template>
 <script>

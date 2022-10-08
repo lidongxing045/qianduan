@@ -58,5 +58,12 @@ export function delInfo(id){
         //url:`/api2/info/${id}`
     })
 }
+//数据概览
+export function dataview(){
+    return service({
+        method:'get',
+        url:'/api2/dataview',
+    })
+}
 
 

@@ -8,13 +8,26 @@ import 'font-awesome/css/font-awesome.min.css'
 //import axios from 'axios'
 import router from './router'
 import service from './service.js'
+import echarts from 'echarts'
 
 
 //Vue.prototype.axios = axios;
 Vue.use(ElementUI)
 Vue.prototype.service = service;
-Vue.prototype.vice = "我的属性";
+Vue.prototype.$echarts = echarts;
 Vue.config.productionTip = false
+
+//路由导航守卫
+router.beforeEach((to,from,next)=>{
+  if(!localStorage.getItem('username')){
+    if(to.path !== '/login'){
+      next('/login');
+    }else next()
+      
+  }else{
+    next();
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

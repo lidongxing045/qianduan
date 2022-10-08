@@ -9,6 +9,7 @@ export default new Router({
         {
             path: '/',
             redirect:"/login",
+            name:'首页',
             hidden:true,
             // component:()=>import('../components/Home'),
             component: resolve => require(['@/components/Login'], resolve)
